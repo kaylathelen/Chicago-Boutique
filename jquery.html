@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Boutique Features | Charming Boutique</title>
+    <!-- Add jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Link to your existing stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Boutique Features</h1>
+        <nav>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="stylegallery.html">Style Gallery</a></li>
+                <li><a href="jquery.html">JQuery</a></li>
+
+            </ul>        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Engage with Our Boutique</h2>
+            <p>Explore our interactive features to get more details, see special offers, and discover hidden gems in our boutique.</p>
+        </section>
+
+        <!-- Example 1: Show/Hide Product Description -->
+        <section class="feature-box">
+            <button id="toggleText" class="boutique-btn">Discover Product Details</button>
+            <div class="product-description" style="display:none;">
+                <p>Our latest collection features elegant, hand-crafted designs that add a touch of sophistication to your wardrobe. Click to explore more!</p>
+            </div>
+        </section>
+
+        <!-- Example 2: Fade In/Out Promotional Offers -->
+        <section class="feature-box">
+            <button id="fadeToggle" class="boutique-btn">View Special Offers</button>
+            <div class="promo-offer" style="display:none;">
+                <p><strong>Exclusive Deal:</strong> Get 20% off your next purchase with the code BOUTIQUE20. Limited time only!</p>
+            </div>
+        </section>
+
+        <!-- Example 3: Slide Down/Up More Products -->
+        <section class="feature-box">
+            <button id="slideToggle" class="boutique-btn">See More Trendy Products</button>
+            <div class="more-products" style="display:none;">
+                <p>Our new arrivals are perfect for any occasion. From cozy sweaters to chic accessories, discover your new favorites today!</p>
+            </div>
+        </section>
+
+        <section class="footer-info">
+            <p>Feel free to explore our site for more amazing offers and new arrivals. Enjoy shopping at Charming Boutique!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Charming Boutique. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle product description visibility
+        $("#toggleText").click(function() {
+            $(".product-description").toggle("slow");
+        });
+
+        // Fade in and out of special offers
+        $("#fadeToggle").click(function() {
+            $(".promo-offer").fadeToggle("slow");
+        });
+
+        // Slide up/down to reveal more products
+        $("#slideToggle").click(function() {
+            $(".more-products").slideToggle("slow");
+        });
+    </script>
+</body>
+</html>
